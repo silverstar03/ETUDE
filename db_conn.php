@@ -3,7 +3,7 @@
 $hostname = 'localhost';
 $username = 'star';
 $password = '0421';
-$database = 'shopping';
+$database = 'byulshop';
 $conn = mysqli_connect($hostname, $username, $password, $database);
 
 // if($conn){
