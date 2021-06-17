@@ -130,7 +130,7 @@ footer{ width: 100%; height: 350px; background-color:#f5f5f5; clear:both;}
                     </ul>
                 </nav>
             <div class="title">
-                <h1><a href="index.php"><img src="img/logo.png"></a></h1>
+                <h1><a href="./"><img src="img/logo.png"></a></h1>
             </div>
         </div>
     </header>
