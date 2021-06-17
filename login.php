@@ -23,7 +23,7 @@
                                 ?><a href="logout.php">로그아웃</a></li>
                             <?php }
                             else{?>
-                               <a href="login.html">로그인</a></li>
+                               <a href="login.php">로그인</a></li>
                             <?php } ?>
                             <li><p>|</p></li>
                             <li>
@@ -41,7 +41,7 @@
                         </ul>
                     </nav>
                     <div class="title">
-                        <h1><a href="index.php"><img src="img/logo.png"></a></h1>
+                        <h1><a href="./"><img src="img/logo.png"></a></h1>
                     </div>
                 </div>
             </div>
