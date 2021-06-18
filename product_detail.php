@@ -90,15 +90,28 @@
                             <hr>
 
                             <div class="detail_chose">
-                                <div class="prd_select">
-                                    <div class="select_img">
-                                        <img src="<?= $data['p_path']?>" alt="상품 사진">
+                                <div class="prd">
+                                    <div class="prd_select">
+                                        <div class="select_img">
+                                            <img src="<?= $data['p_path']?>" alt="상품 사진">
+                                        </div>  
+                                        <div class="select_title">
+                                            <p class="chose_title"><?= $data['p_name']?></p>
+                                        </div>
+                                    </div>    
+                                
+                                    <div class="select_cnt">                                
+                                        <span class="stepper">
+                                            <button>–</button>
+                                            <input type="number" id="stepper" value="1" min="0" max="100" step="1" readonly>
+                                            <button>+</button>
+                                        </span>
+                                        <p class="select_price"><?= $data['p_price']?>원</p>
                                     </div>
-                                    <div class="select_title">
-                                        <p class="chose_title"><?= $data['p_name']?></p>
-                                    </div>
-
-                                </div>                                    
+                                </div>
+                                
+                                <div class="result">
+                                </div>
                             </div>
                             <div class="prd_btn">
                                 <ul>
@@ -187,6 +200,44 @@
                 </div>
             </div>
         </footer>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script>
+        var inc = document.getElementsByClassName("stepper");
+for (i = 0; i < inc.length; i++) {
+  var incI = inc[i].querySelector("input"),
+    id = incI.getAttribute("id"),
+    min = incI.getAttribute("min"),
+    max = incI.getAttribute("max"),
+    step = incI.getAttribute("step");
+  document
+    .getElementById(id)
+    .previousElementSibling.setAttribute(
+      "onclick",
+      "stepperInput('" + id + "', -" + step + ", " + min + ")"
+    ); 
+  document
+    .getElementById(id)
+    .nextElementSibling.setAttribute(
+      "onclick",
+      "stepperInput('" + id + "', " + step + ", " + max + ")"
+    ); 
+}
+
+function stepperInput(id, s, m) {
+  var el = document.getElementById(id);
+  if (s > 0) {
+    if (parseInt(el.value) < m) {
+      el.value = parseInt(el.value) + s;
+    }
+  } else {
+    if (parseInt(el.value) > m) {
+      el.value = parseInt(el.value) + s;
+    }
+  }
+}
+
+        </script>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src = "js/script.js" type="text/javascript"></script>
